@@ -1,7 +1,7 @@
 <section ng-Controller="MemberListCtrl">
 	<ul>
 		<li ng-repeat="member in experts">
-			<a href="#/info?no={{ member.No }}"><section>
+			<a href="#/info/{{ member.link }}"><section>
 				<h1>{{ member.name }}</h1>
 			</section>
 		</li></a>
