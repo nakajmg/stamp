@@ -1,9 +1,13 @@
 <section ng-Controller="MemberListCtrl">
-	<ul>
-		<li ng-repeat="member in experts">
-			<a href="#/info/{{ member.link }}"><section>
+	<ul class="member-list">
+		<li ng-repeat="member in experts" class="member" style="border-color:{{ member.color }};">
+			<a href="#/info/{{ member.link }}" id="stamp-{{ member.link }}" class="member-stamp">
+			<section>
+				<img src="{{ member.icon }}" class="icon">
 				<h1>{{ member.name }}</h1>
+				<span class="member-no">No.{{ member.No }}</span>
 			</section>
-		</li></a>
+			</a>
+
 	</ul>
 </section>

@@ -15,7 +15,7 @@ h1 {
 }
 
 header h1 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #main {
@@ -24,7 +24,186 @@ header h1 {
 #main > section {
   background: #fafaf5;
 }
-
+body{
+  background-color: #E6E6E6;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro" , "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+header{
+  text-align: center;
+  background-color:#fff;
+  padding:0px 0px 5px;
+  font-family :'Open Sans Condensed', sans-serif;
+}
+header img{
+  display:block;
+  margin:0 auto;
+  width:200px;
+  height:46px;
+}
 footer {
   text-align: center;
+  background-color: #C0C3C2;
+  padding:10px 0px 10px;
+  color:#595959;
 }
+.member-list{
+  text-align: left;
+  margin:8px auto;
+  margin-left:1px;
+}
+.member{
+  display:inline-block;
+  width:102px;
+  font-size: 11.5px;
+  text-align: center;
+  height:93px;
+  border:2px solid rgba(0,0,0,.1);
+  padding-top:10px;
+  background-color: #FAFAF5;
+  position: relative;
+}
+.member h1{
+  color: #333 !important;
+}
+.member-stamp{
+  position: relative;
+}
+.member-no{
+  position:absolute;
+  top:3px;
+  right:3px;
+  color:rgba(165,165,165,.4);
+  font-family:'Helvetica';
+  font-size:9px;
+}
+
+
+.member a{
+  text-decoration: none !important;
+}
+.member-info{
+  color:#fff !important;
+}
+.member-frame{
+  width:310px;
+  height:410px;
+  position: relative;
+  margin:3px auto;
+  background-image: url(/img/icon_frame2.png);
+  -webkit-background-size: 100% auto;
+       -o-background-size: 100% auto;
+          background-size: 100% auto;
+  background-color: #FFF;
+}
+.member-info h1{
+  text-align: center;
+}
+.member-info-face{
+  width:230px;
+  height:240px;
+  margin:0 auto;
+  padding:10px;
+  /*border:2px solid rgba(255,255,255,.5);*/
+}
+.member-info-icon{
+  width: 238px;
+  height: 231px;
+  display: block;
+  margin: 0 auto;
+  /*-webkit-border-radius: 10%;*/
+          /*border-radius: 10%;*/
+  -webkit-filter: sepia(0.7);
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+.member-info-no{
+  position: absolute;
+  top:5px;
+  right:5px;
+  color:rgba(0,0,0,.1);
+  font-size:24px;
+  font-weight: 600;
+  font-family: 'Helvetica';
+  -webkit-filter:blur(1px);
+}
+.info-stamparea{
+  width:238px;
+  height:231px;
+  position: absolute;
+  top: 83px;
+  left: 34px;
+}
+.stamp{
+  background-image:url(/img/html5stamp.png);
+  -webkit-background-size: auto 100% ;
+       -o-background-size: auto 100% ;
+          background-size: auto 100% ;
+          background-repeat: no-repeat;
+  width:100%;
+  height: 100%;
+  position: absolute;
+  left:0;
+  top:0;
+  z-index:10;
+  opacity: 0.6;
+  display: block;
+  -webkit-filter:sepia(0.3);
+  background-position: center center;
+}
+.member-stamp .stamp{
+  -webkit-background-size: auto 75%;
+       -o-background-size: auto 75%;
+          background-size: auto 75%;
+  top:-13px;
+  opacity:0.1;
+}
+
+.wrapper{
+  width:320px;
+  margin:0 auto;
+}
+.icon{
+  width:66px;
+  height:66px;
+  -webkit-border-radius: 33px;
+  -moz-border-radius: 33px;
+  -ms-border-radius: 33px;
+  -o-border-radius: 33px;
+  border-radius: 33px;
+}
+.info-moreLink{
+  background-color: #FFF;
+  text-align: center;
+  padding:4px 0px;
+  font-size:13px;
+  width:97%;
+  margin:5px auto;
+
+}
+
+.anime-stamp{
+  -webkit-animation-name : onstamp;
+  -webkit-animation-duration:250ms;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-iteration-count:1;
+  -webkit-transform-origin:50% 50%;
+}
+.anime-stampend{
+  -webkit-animation-name : onstampend;
+  -webkit-animation-duration:150ms;
+  -webkit-animation-timing-function:ease-out;
+  -webkit-animation-iteration-count:1;
+  -webkit-transform-origin:50% 50%;
+}
+
+@-webkit-keyframes onstamp{
+  0%{ -webkit-transform:scale(2.5);}
+  100%{ -webkit-transform:scale(1);}
+}
+@-webkit-keyframes onstampend{
+  0%{ -webkit-transform:scale(1);}
+  50%{ -webkit-transform:scale(0.9);}
+  100%{ -webkit-transform:scale(1);}
+}
+
