@@ -2,8 +2,8 @@
 	<div class="member-info">
 		<!-- <h1>{{member.name}}</h1> -->
 		<div class="member-frame" style="border: 2px solid {{ member.color }};">
-				<div class="info-stamparea" id="info-stamparea">
-					<img src="{{ member.icon }}" alt="" class="member-info-icon" style="border: 1px solid {{ member.color }};">
+				<div class="info-stamparea" id="info-stamparea" ng-click="stamp();">
+					<img ng-src="{{ member.icon }}" alt="" class="member-info-icon" style="border: 1px solid {{ member.color }};">
 					<span class="member-info-no">No.{{ member.No }}</span>
 				</div>
 		</div>
