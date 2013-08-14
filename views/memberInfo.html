@@ -1,12 +1,17 @@
 <section>
 	<div class="member-info">
-		<!-- <h1>{{member.name}}</h1> -->
 		<div class="member-frame" style="border: 2px solid {{ member.color }};">
 				<div class="info-stamparea" id="info-stamparea" ng-click="stamp();">
 					<img ng-src="{{ member.icon }}" alt="" class="member-info-icon" style="border: 1px solid {{ member.color }};">
 					<span class="member-info-no">No.{{ member.No }}</span>
 				</div>
+				<h1 class="member-info-name">{{ member.name }}</h1>
 		</div>
+		<p class="member-info-meet" style="border-color:{{member.color}}">出没予定イベント</p>
+		<ul class="member-info-event">
+			<li style="border-color:{{member.color}}"><a ng-href="http://atnd.org/events/42401" target="_blank">8/26 HTML5とか勉強会</a>
+			<li style="border-color:{{member.color}}"><a ng-href="http://atnd.org/events/41863" target="_blank">8/30 MarkupCafe</a>
+		</ul>
 		<!-- <button>スタンプを押す</button> -->
 		<p class="info-moreLink"><a ng-href="http://html5experts.jp/{{member.link}}/" target="_blank">HTML5 Experts.jpで詳細をみる</a></p>
 		<p class="info-moreLink"><a ng-href="#/">一覧に戻る</a></p>

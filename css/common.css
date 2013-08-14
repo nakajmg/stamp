@@ -87,7 +87,7 @@ footer {
 }
 .member-frame{
   width:310px;
-  height:410px;
+  height:355px;
   position: relative;
   margin:3px auto;
   background-image: url(/img/icon_frame2.png);
@@ -128,6 +128,18 @@ footer {
   font-family: 'Helvetica';
   -webkit-filter:blur(1px);
 }
+.member-info-name{
+  width:100%;
+  text-align: center;
+  position: absolute;
+  background-color: #FFF;
+  color:#333;
+  font-size: 24px;
+  height:36px;
+  top: 317px;
+  left: 0px;
+  font-weight: 600;
+}
 .info-stamparea{
   width:238px;
   height:231px;
@@ -151,6 +163,7 @@ footer {
   display: block;
   -webkit-filter:sepia(0.3);
   background-position: center center;
+  -webkit-transform:rotate(-8deg);
 }
 .member-stamp .stamp{
   -webkit-background-size: auto 89%;
@@ -158,6 +171,29 @@ footer {
           background-size: auto 89%;
   top:-13px;
   opacity:0.6;
+}
+.member-info-meet{
+  margin:0 auto;
+  width:305px;
+  padding:4px 0px;
+  padding-left:5px;
+  background-color: #FFFFFF;
+  text-align: left;
+  font-size: 14px;
+  border-bottom:1px solid rgba(0,0,0,.3);
+}
+.member-info-event{
+  width:310px;
+  margin:0px auto 15px;
+  list-style: none;
+  background-color: #FFFFFF;
+
+}
+.member-info-event li{
+  padding:3px 0px;
+  padding-left:10px;
+  font-size:13px;
+  border-bottom:1px solid rgba(0,0,0,.3);
 }
 
 .wrapper{
@@ -199,8 +235,8 @@ footer {
 }
 
 @-webkit-keyframes onstamp{
-  0%{ -webkit-transform:scale(2.5);}
-  100%{ -webkit-transform:scale(1);}
+  0%{ -webkit-transform:scale(2.5) rotate(-8deg);}
+  100%{ -webkit-transform:scale(1) rotate(-8deg);}
 }
 @-webkit-keyframes onstampend{
   0%{ -webkit-transform:scale(1);}
