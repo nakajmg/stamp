@@ -60,36 +60,24 @@ sr.value('experts', {
 		{ "No": 45, "name": "比留間 和也", "link": "edo_m18", "icon": "./img/45.jpg","color": "#ffad39"}
 	]
 });
-var counter = 0;
-var arrb;
 
 // for memberlist.html
 sr.controller('MemberListCtrl', function($scope, experts){
-	$scope.experts = experts.memberList;
 
-	var arr = [];
+	var member_list = experts.memberList;
 
-	for(var i = 0, len = experts.memberList.length; i < len; i++){
+	for(var i = 0, len = member_list.length; i < len; i++){
+		var exp = member_list[i];
 
-		var exp = experts.memberList[i];
-		var skey = exp.link;
-
-		if(window.localStorage.getItem(skey) !== null){
-			arr.push(skey);
+		if(window.localStorage.getItem(exp.link) !== null){
+			exp.stamped = true;
+		} else {
+			exp.stamped = false;
 		}
 	}
-	if(!counter){
-		arrb=arr;
-		setTimeout(function(){
-			$.each(arrb,function(){
-				var skey = this+"";
-				var id = '#stamp-'+skey;
-				$(id).find('section').append('<span class="stamp">');
-			});
-		},50)
-		counter++;
-	}
 
+	$scope.experts = member_list;
+	
 });
 
 // for memberinfo.html
