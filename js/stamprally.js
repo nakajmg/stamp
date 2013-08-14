@@ -86,7 +86,7 @@ sr.controller('MemberListCtrl', function($scope, experts){
 				var id = '#stamp-'+skey;
 				$(id).find('section').append('<span class="stamp">');
 			});
-		},100)
+		},50)
 		counter++;
 	}
 
